@@ -16,3 +16,18 @@ console.log(ctx);
 const scale = 20;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+
+// Now we need an array to save the bodies of our snake 
+let score = 0;
+let snake = [];
+
+// Just to give us a start we can initiate the initial head of the snake at (0,0) coordinate 
+
+// Notice that the first element of our snake contains an object identifying the x and y coordinate of the initial piece of the snake 
+snake[0] = {
+  x: (Math.floor(Math.random() *
+    columns)) * scale,
+  y: (Math.floor(Math.random() *
+    rows)) * scale
+};
+// console.log(snake);
