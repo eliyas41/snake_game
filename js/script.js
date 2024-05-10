@@ -37,3 +37,26 @@ let food = {
   y: (Math.floor(Math.random() *
     rows)) * scale
 }
+
+// call our draw function every 100 ms
+let playGame = setInterval(draw, 100);
+
+//control the snake direction
+// Let's initially make the snake move right  
+let d = "right";
+
+// Use the keyboard keys to control the direction of the snake 
+document.onkeydown = direction;
+
+function direction(event) {
+  let key = event.keyCode;
+  if (key == 37 && d != "right") {
+    d = "left";
+  } else if (key == 38 && d != "down") {
+    d = "up";
+  } else if (key == 39 && d != "left") {
+    d = "right";
+  } else if (key == 40 && d != "up") {
+    d = "down";
+  }
+}
