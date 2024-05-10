@@ -31,3 +31,9 @@ snake[0] = {
     rows)) * scale
 };
 // console.log(snake);
+let food = {
+  x: (Math.floor(Math.random() *
+    columns)) * scale,
+  y: (Math.floor(Math.random() *
+    rows)) * scale
+}
